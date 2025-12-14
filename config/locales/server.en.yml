@@ -1,0 +1,7 @@
+en:
+  site_settings:
+    solved_pm_enabled: "Enable Solved in private messages"
+    solved_pm_target_groups: "PM target groups eligible for Solved"
+    solved_pm_actor_groups: "Groups allowed to mark solutions in eligible PMs"
+    solved_pm_allow_topic_owner: "Allow PM topic owner to mark a solution"
+    solved_pm_allow_personal_messages: "Allow Solved in 1:1 private messages"
