@@ -24,6 +24,8 @@ This is intended for setups where incoming support emails are turned into Discou
 - Targeted at **Discourse 2025.11.x** (where Solved is bundled into core).
 - The plugin patches `Guardian#can_accept_answer?`. If Discourse changes that method signature/name in the future, the plugin may need a small update.
 
+---
+
 ## Settings
 
 Go to **Admin → Settings** and search for `solved_pm`.
