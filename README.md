@@ -122,5 +122,5 @@ hooks:
     - exec:
         cd: $home/plugins
         cmd:
-          - git clone https://github.com/your-org/wb-allow-solved-pms.git
+          - git clone https://github.com/kilpio-wb/wb-allow-solved-pms.git
 
