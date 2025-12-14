@@ -11,12 +11,22 @@ enabled_site_setting :solved_pm_enabled
 after_initialize do
   module ::WbAllowSolvedPms
     module GuardianPatch
-      def can_accept_answer?(*args)
-        topic = args[0]
-        post  = args[1]
+      def can_accept_answer?(*args, **kwargs)
+        topic = args[0] if args.size > 0
+        post  = args[1] if args.size > 1
+
+        if args[0].is_a?(Hash)
+          topic ||= args[0][:topic] || args[0]["topic"]
+          post  ||= args[0][:post]  || args[0]["post"]
+        end
+
+        topic ||= kwargs[:topic]
+        post  ||= kwargs[:post]
 
         # Keep core behavior for non-PMs (and for any unexpected call shapes)
-        return super(*args) unless topic&.private_message?
+        unless topic&.private_message?
+          return kwargs.empty? ? super(*args) : super(*args, **kwargs)
+        end
 
         # Feature gate
         return false unless SiteSetting.solved_enabled
