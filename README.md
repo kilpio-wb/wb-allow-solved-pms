@@ -42,5 +42,5 @@ hooks:
     - exec:
         cd: $home/plugins
         cmd:
-          - git clone https://github.com/your-org/discourse-solved-in-group-messages.git
+          - git clone https://github.com/your-org/wb-allow-solved-pms.git
 

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-# name: discourse-solved-in-group-messages
+# name: wb-allow-solved-pms
 # about: Re-enables Discourse Solved "accept answer" inside PMs (optionally restricted to group messages).
 # version: 0.1.0
 # authors: Wiren Board
-# url: https://github.com/kilpio-wb/discourse-solved-in-group-messages
+# url: https://github.com/kilpio-wb/wb-allow-solved-pms
 
 enabled_site_setting :solved_pm_enabled
 
